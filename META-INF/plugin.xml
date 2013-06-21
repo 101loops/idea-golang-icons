@@ -1,0 +1,30 @@
+<idea-plugin version="2">
+
+  <id>com.loops101.icons.golang</id>
+  <name>Go Icons</name>
+  <version>1.0</version>
+  <vendor email="idea@101loops.com" url="http://www.101loops.com">101 Loops</vendor>
+
+  <description><![CDATA[
+      Customized icons for Go source and test files
+  ]]></description>
+
+  <change-notes><![CDATA[
+  ]]></change-notes>
+
+  <idea-version since-build="107.105"/>
+
+  <application-components>
+  </application-components>
+
+  <project-components>
+  </project-components>
+
+  <actions>
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <iconProvider implementation="com.loops101.icons.GoIconProvider"/>
+  </extensions>
+
+</idea-plugin>
