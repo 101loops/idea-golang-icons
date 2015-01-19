@@ -14,19 +14,17 @@ public class GoIconProvider extends IconProvider {
     private static final String TEST_URL = "/com/loops101/icons/go-test.png";
 
     public Icon getIcon(@NotNull PsiElement psiElement, int flags) {
-
         PsiFile containingFile = psiElement.getContainingFile();
-
         if (containingFile != null) {
-            if (containingFile.getName().endsWith(".go")) {
-                if (containingFile.getName().endsWith("_test.go")) {
+            String fileName = containingFile.getName();
+            if (fileName.endsWith(".go")) {
+                if (fileName.endsWith("_test.go")) {
                     return IconLoader.getIcon(TEST_URL);
                 } else {
                     return IconLoader.getIcon(SOURCE_URL);
                 }
             }
         }
-
         return null;
     }
 }
